@@ -312,6 +312,7 @@ package
 }
 import flash.display.Shape;
 import flash.display.Sprite;
+import flash.events.MouseEvent;
 import flash.geom.ColorTransform;
 import flash.text.TextField;
 import flash.text.TextFieldAutoSize;
@@ -374,7 +375,6 @@ class DataItem extends Sprite
 		titleLabel.x = -30-titleLabel.width;
 		titleLabel.y = -titleLabel.height*0.5;
 		addChild(titleLabel);
-		
 	}
 	
 	public function hidePrice(value:Boolean):void
@@ -396,4 +396,5 @@ class DataItem extends Sprite
 		colorTran.color = color;
 		valueBar.transform.colorTransform = colorTran;
 	}
+	
 }

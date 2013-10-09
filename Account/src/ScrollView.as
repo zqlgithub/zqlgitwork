@@ -77,9 +77,10 @@ package
 		{
 			if(this.hitTestPoint(e.stageX, e.stageY))
 			{
-				v = Math.max(e.stageY - prevY, 3);
+				v = e.stageY - prevY;
 				prevY = e.stageY;
 				isGrab = true;
+				trace(v);
 			}
 			else
 			{

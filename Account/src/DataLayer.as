@@ -359,15 +359,15 @@ class DataItem extends Sprite
 		addChild(label);
 		
 		valueBg = Utils.createRect(maxBarLength, label.height, 0x4ADB8E, false, 0, 0);
-		valueBg.x = 30;
-		valueBg.y = -label.height*0.5;
 		valueBg.alpha = 0.3;
 		this.addChildAt(valueBg, 0);
 		valueBar = new Shape;
 		valueBar.graphics.beginFill(0x4ADB8E);
 		valueBar.graphics.drawRect(0, 0, maxBarLength, label.height);
 		valueBar.graphics.endFill();
-		valueBg.addChild(valueBar);
+		valueBar.x = valueBg.x = 30;
+		valueBar.y = valueBg.y = -label.height*0.5;
+		addChild(valueBar);
 		
 		var titleSize:int = isBold ? 45 : 28;
 		var titleLabel:TextField = Utils.createLabel(title, titleSize);

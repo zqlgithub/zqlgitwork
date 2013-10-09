@@ -66,6 +66,11 @@ package
 			var sql:String = "DELETE FROM account WHERE time = '"+itemTime+"'";
 			this.executeStatement(sql);
 		}
+		public function deleteAll():void
+		{
+			var sql:String = "DELETE FROM account";
+			this.executeStatement(sql);
+		}
 		
 		public function getAllItems(_callBack:Function):void
 		{
